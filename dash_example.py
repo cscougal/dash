@@ -13,6 +13,7 @@ import pandas as pd
 
 
 input_dir = r"C:\\"
+#set to folder where sample data is located eg. r"C:\Users\XX\Documents\\"
 mapbox_access_token  = pd.read_csv(input_dir + "mapbox_key.txt")["key"].item()
 #this loads a mapbox access token from a text file
 
@@ -28,7 +29,6 @@ data = [df]
 #this version uses csv for demo purposes
 
 dataframes = dict(zip(labels,data))
-
 
 app = dash.Dash()
 app.layout = html.Div([
@@ -56,13 +56,10 @@ app.layout = html.Div([
 #this creates the html aspects of the web page and key elements such as
 #graphs, images etc.
 
-
-
 #dash works best by defining structure and elements then populating 
 #said elements using decorator fucntions. You can hard code info instead,
 #but will lose reproducaibilty and will run into concurrency issues with
 #multiple users
-
 
 
 #decorator function allows outputs, inputs and states to be defined
@@ -211,7 +208,6 @@ def display(btn1, btn2,forward_clicks,back_clicks,json_pics):
         
         return pic
     
-
 
 def button_logic(btn1, btn2,forward_clicks,back_clicks,pics):
     
