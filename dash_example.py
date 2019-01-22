@@ -12,7 +12,7 @@ import dash_core_components as dcc
 import pandas as pd
 
 
-input_dir = r"C:\Users\cs08\Documents\Projects\twitter_extractions\\"
+input_dir = r"C:\\"
 mapbox_access_token  = pd.read_csv(input_dir + "mapbox_key.txt")["key"].item()
 #this loads a mapbox access token from a text file
 
