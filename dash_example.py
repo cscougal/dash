@@ -15,7 +15,7 @@ import pandas as pd
 input_dir = r"C:\\"
 #set to folder where sample data is located eg. r"C:\Users\XX\Documents\\"
 mapbox_access_token  = pd.read_csv(input_dir + "mapbox_key.txt")["key"].item()
-#this loads a mapbox access token from a text file
+#this loads a mapbox access token from a text file. Req for map plot
 
 df = pd.read_csv(input_dir + "sample.csv")
 
