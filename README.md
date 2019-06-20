@@ -11,4 +11,6 @@ Use commandline: python dash_example.py to run the server, then navigate to defa
 
 Run locally, not on network or in a production environment as this is configured in debug mode
 
+linux
+
 
